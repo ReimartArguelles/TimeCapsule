@@ -192,6 +192,15 @@ li a:hover {
     animation-duration: 1s;
 }
 
+.third-main-container {
+    background-color: #281549;
+    height: 800px;
+    position: relative;
+    display: flex;
+    z-index: -10;
+    overflow: hidden;
+}
+
 @keyframes fade-in-html {
     from {
         opacity: 0;
@@ -342,6 +351,21 @@ li a:hover {
     background-color: none;
     position: relative;
     border-radius: 6px;
+  }
+
+  .content h1 {
+    font-weight: 100;
+    width: 40vw;
+  }
+
+  .content h2 {
+    font-weight: 900;
+    width: 50vw;
+    font-size: 40px;
+  }
+
+  .content h1:nth-of-type(2) {
+    padding-bottom: 100px;
   }
 
   .firstImage{
