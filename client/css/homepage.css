@@ -3,6 +3,19 @@
     padding: 0;
     list-style-type: none;
     font-family: Verdana, sans-serif;
+    box-sizing: border-box;
+}
+
+.glow-text-white {
+    color: white;
+    font-size: 5rem;
+    text-shadow: 0 0 10px #fff;
+}
+
+.glow-text-purple {
+    color: #8c30fd;
+    font-size: 5rem;
+    text-shadow: 0 0 10px #8c30fd;
 }
 
 .navbar {
@@ -42,4 +55,112 @@ li a {
   
 li a:hover {
     background-color: #a05ef0;
+}
+
+.first-main-container {
+    background-color: #281549;
+    height: 800px;
+    position: relative;
+    display: flex;
+    z-index: -10;
+}
+
+.first-main-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #281549;
+    border-bottom-left-radius: 50% 20%;
+    border-bottom-right-radius: 50% 20%;
+    z-index: -1; /* Ensure the pseudo-element is behind the content */
+}
+
+.first-main-container-inner-container {
+    padding-left: 16rem;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.first-main-container-inner-container h1 {
+    color: white;
+    font-size: 5rem;
+    font-weight: 700;
+    width: 500px;
+}
+
+.first-main-container-inner-container h5 {
+    color: #FF4FF3;
+    font-size: 30px;
+}
+
+.first-main-container-inner-container button {
+    width: 200px;
+    cursor: pointer;
+    margin-left: 50px;
+    margin-top: 30px;
+    padding: 5px;
+    border-radius: 30px;
+    border: none;
+    background: linear-gradient(to right, #832eff, #fe4ff2);
+    color: white;
+    font-weight: 700;
+}
+
+.second-main-container-inner-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+    background-color: #281549;
+    position: relative;
+}
+
+.second-main-container-inner-container .html-image {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top: 90%;
+    left: 200px;
+    transform: rotate(5deg);
+}
+
+.second-main-container-inner-container .python-image {
+    width: 700px;
+    height: 500px;
+    left: 220px;
+    top: 50%;
+    position: absolute;
+    transform: rotate(-5deg);
+}
+
+.second-main-container-inner-container .java-image {
+    width: 700px;
+    height: 400px;
+    left: 500px;
+    top: 60%;
+    position: absolute;
+    transform: rotate(10deg);
+}
+
+.second-main-container-inner-container .css-image {
+    width: 200px;
+    height: 200px;
+    left: 600px;
+    top: 30%;
+    position: absolute;
+    transform: rotate(-5deg);
+}
+
+.second-main-container-inner-container .js-image {
+    width: 280px;
+    height: 250px;
+    left: 240px;
+    top: 25%;
+    position: absolute;
+    transform: rotate(5deg);
 }
