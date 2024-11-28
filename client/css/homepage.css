@@ -63,6 +63,7 @@ li a:hover {
     position: relative;
     display: flex;
     z-index: -10;
+    overflow: hidden;
 }
 
 .first-main-container::before {
@@ -101,7 +102,7 @@ li a:hover {
 .first-main-container-inner-container button {
     width: 200px;
     cursor: pointer;
-    margin-left: 50px;
+    margin-left: -1px;
     margin-top: 30px;
     padding: 5px;
     border-radius: 30px;
@@ -124,8 +125,8 @@ li a:hover {
     width: 200px;
     height: 200px;
     position: absolute;
-    top: 90%;
     left: 200px;
+    top: 450px;
     transform: rotate(5deg);
 }
 
@@ -163,4 +164,89 @@ li a:hover {
     top: 25%;
     position: absolute;
     transform: rotate(5deg);
+}
+
+.fade-in-html {
+    animation-name: fade-in-html;
+    animation-duration: 1s;
+}
+
+.fade-in-css {
+    animation-name: fade-in-css;
+    animation-duration: 1s;
+}
+
+.fade-in-python {
+    animation-name: fade-in-python;
+    animation-duration: 1s;
+}
+
+.fade-in-java {
+    animation-name: fade-in-java;
+    animation-duration: 1s;
+}
+
+.fade-in-js {
+    animation-name: fade-in-js;
+    animation-duration: 1s;
+}
+
+@keyframes fade-in-html {
+    from {
+        opacity: 0;
+        top: 700px;
+    }
+
+    to {
+        opacity: 1;
+        top: 450px;
+    }
+}
+
+@keyframes fade-in-css {
+    from {
+        opacity: 0;
+        top: 0;
+    }
+
+    to {
+        opacity: 1;
+        top: 30%;
+    }
+}
+
+@keyframes fade-in-python {
+    from {
+        opacity: 0;
+        top:90%;
+    }
+
+    to {
+        opacity: 1;
+        top: 50%;
+    }
+}
+
+@keyframes fade-in-java {
+    from {
+        opacity: 0;
+        top: 90%;
+    }
+
+    to {
+        opacity: 1;
+        top: 60%;
+    }
+}
+
+@keyframes fade-in-js {
+    from {
+        opacity: 0;
+        top: 0;
+    }
+
+    to {
+        opacity: 1;
+        top: 25%;
+    }
 }
