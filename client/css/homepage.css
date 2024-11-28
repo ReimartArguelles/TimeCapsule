@@ -4,6 +4,7 @@
     list-style-type: none;
     font-family: Verdana, sans-serif;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 .glow-text-white {
@@ -544,3 +545,64 @@ li a:hover {
     height: 340px;
   }
 
+.fifth-main-container {
+  background-color: #281549;
+  height: 500px;
+  padding-top: 100px;
+}
+
+.input-container {
+  display: flex;
+  justify-content: space-evenly;
+  height: 100%;
+}
+
+.form-container input{
+  width: 500px;
+  height: 40px;
+  border: none;
+  border-radius: 30px;
+  padding: 10px;
+  font-size: 20px;
+}
+
+.form-container input {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.form-container label {
+  color: white;
+}
+
+.form-container button {
+  position: absolute;
+  width: 200px;
+  cursor: pointer;
+  margin-left: -1px;
+  height: 50px;
+  border-radius: 30px;
+  border: none;
+  margin-top: 30px;
+  background: linear-gradient(to right, #832eff, #fe4ff2);
+}
+
+.sixth-main-container {
+  background-color: #281549;
+  height: 900px;
+  padding-top: 100px;
+  position: relative;
+}
+
+.sixth-main-container h1 {
+  color: white;
+  font-size: 3rem;
+  text-align: center;
+  text-shadow: 0 0 10px #fff;
+}
+
+.sixth-main-container-image {
+  position: absolute;
+  left:35%;
+  top: 25%;
+}

@@ -16,7 +16,7 @@ app.use(cors());
 
 app.use(express.static('public'));
 
-app.post('/', router);
+app.use('/user', router);
 
 mongoose.connect(process.env.MONGODB_URI, {
     useNewUrlParser: true,
