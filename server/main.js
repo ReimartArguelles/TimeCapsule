@@ -3,9 +3,11 @@ import router from './routes/userroute.js';
 import mongoose from 'mongoose';
 import cors from 'cors';
 import dotenv from 'dotenv';
+import path from 'path';
 import { fileURLToPath } from 'url';
+dotenv.config();
 
-console.log('MONGODB_URI:', process.env.MONGODB_URI); // Verify the environment variable
+console.log('MONGODB_URI:', process.env.MONGODB_URI);
 
 const app = express();
 
@@ -14,7 +16,7 @@ app.use(cors());
 
 app.use(express.static('public'));
 
-app.use('/', router);
+app.post('/', router);
 
 mongoose.connect(process.env.MONGODB_URI, {
     useNewUrlParser: true,

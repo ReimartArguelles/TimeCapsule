@@ -4,13 +4,11 @@ export const createData = async (req, res) => {
     const { userName, projectName, projectDescription, skillsAcquired } = req.body;
 
     try {
-        const userData = await usermodel.create({ userName, projectName, projectDescription, skillsAcquired });
-
         if(!userName || !projectName || !projectDescription || !skillsAcquired) {
             return res.status(400).json({ message: 'Please fill in all fields' });
         }
-
-        const newUser = new usermodel({ userName, projectName, projectDescription, skillsAcquired });
+        const userData = await usermodel.create({ userName, projectName, projectDescription, skillsAcquired });
+        const newUser = new usermodel(userData);
         await newUser.save();
         res.status(201).json(newUser);
     }
