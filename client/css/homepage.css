@@ -273,15 +273,16 @@ li a:hover {
 
 .timeline {
     position: relative;
-    max-width: 1200px;
+    max-width: 1500px;
     margin: 0 auto;
+    overflow-x: hidden;
   }
   
   .timeline::after {
     content: '';
     position: absolute;
     width: 6px;
-    background-color: rgb(56, 50, 50);
+    background-color: #281549;
     top: 0;
     bottom: 0;
     left: 50%;
@@ -302,7 +303,7 @@ li a:hover {
     height: 25px;
     right: -17px;
     background-color: #e6e1e1;
-    border: 4px solid rgb(109, 105, 105);
+    border: 4px solid #281549;
     top: 15px;
     border-radius: 50%;
     z-index: 1;
@@ -324,9 +325,6 @@ li a:hover {
     width: 0;
     z-index: 1;
     right: 30px;
-    border: medium solid rgb(114, 102, 102);
-    border-width: 10px 0 10px 10px;
-    border-color: transparent transparent transparent rgb(114, 102, 102);
   }
   
   .right::before {
@@ -337,9 +335,6 @@ li a:hover {
     width: 0;
     z-index: 1;
     left: 30px;
-    border: medium solid rgb(114, 102, 102);
-    border-width: 10px 0 10px 10px;
-    border-color: transparent transparent transparent rgb(114, 102, 102);
   }
   
   .right::after {
@@ -347,10 +342,8 @@ li a:hover {
   }
   
   .content {
-    padding: 15px 30px;
     background-color: none;
     position: relative;
-    border-radius: 6px;
   }
 
   .content h1 {
@@ -369,16 +362,18 @@ li a:hover {
   }
 
   .firstImage{
-    height: 205px;
+    height: 280px;
+    padding: 0;
+    margin: 0;
   }
 
   .secondImage{
-    height: 350px;
+    height: 450px;
   }
 
   .thirdImage{
-    height: 300px;
-    padding: 20px 180px;
+    height: 400px;
+    
   }
   
   .fourthImage{
@@ -411,3 +406,142 @@ li a:hover {
     left: 0%;
     }
   }
+
+
+
+  .fourth-main-container {
+    background-color: #281549;
+    position: relative;
+    margin: 0 auto;
+    width: 100%;
+  }
+  
+  .fourth-main-container::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: white;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+  }
+  
+  .tmp_container {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+  }
+  
+  .tmp_container::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -17px;
+    background-color: #281549;
+    border: 4px solid #ffffff;
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+    
+  }
+  
+  .lleft {
+    left: 15%;
+  }
+  
+  .rright {
+    left: 50%;
+  }
+  
+  .lleft::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    right: 30px;
+    border-width: 10px 0 10px 10px;
+  }
+  
+  .rright::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    left: 30px;
+    border-width: 10px 0 10px 10px;
+  }
+  
+  .rright::after {
+    left: -16px;
+  }
+
+  .lleft::after {
+    left: 648px;
+  }
+    
+  .tmp_content {
+    padding: 20px 30px;
+    background-color: none;
+    position: relative;
+    border-radius: 6px;
+  }
+
+  .fourthImage{
+    height: 300px;
+    margin-left: 80px;
+  }
+
+  .fifthImage{
+    height: 300px;
+  }
+
+  .tmp_content h1{
+    color: #fff;
+  }
+  
+  @media screen and (max-width: 600px) {
+    .fourth-main-container::after {
+    left: 31px;
+    }
+    
+    .tmp_container {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+    }
+    
+    .tmp_container::before {
+    left: 60px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white;
+    }
+  
+    .lleft::after, .rright::after {
+    left: 15px;
+    }
+    
+    .rright {
+    left: 0%;
+    }
+  }
+
+  .centerImg img{
+    position: relative;
+    margin: 0;
+    left: 38.2%;
+    z-index: 100;
+    height: 450px;
+  }
+
+  .centerImg{
+    height: 340px;
+  }
+
